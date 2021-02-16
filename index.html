@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+      user-scalable="no"
+    />
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+  </head>
+
+  <body>
+    <figure>
+      <figcaption>Listen to the T-Rex:</figcaption>
+      <audio id="a1" controls preload="auto">
+        <source
+          src="https://gateway.mangofox.com/ipfs/bafybeihabsuv6yii4ojhsc5qhs2f42rqyvyceeexq4ufxi5gsq6mywgvgm"
+          type="audio/mpeg"
+        />
+      </audio>
+    </figure>
+    <br />
+    <audio preload="auto" controls>
+      <source
+        src="https://gateway.mangofox.com/ipfs/bafybeick3ceyjsd4lw6q3j77pnogjv5uwtvdmxxrm24jnozhzmyr3h2qce"
+        type="audio/mpeg"
+      />
+    </audio>
+    <br />
+
+    <audio controls>
+      <source src="B-1-1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <br />
+    <audio controls>
+      <source
+        src="https://www.w3schools.com/tags/horse.mp3"
+        type="audio/mpeg"
+      />
+      <source src="https://www.w3schools.com/tags/horse.ogg" type="audio/ogg" />
+
+      Your browser does not support the audio element.
+    </audio>
+    <br />
+    <audio
+      controls="controls"
+      src="https://www.tutorialrepublic.com/examples/audio/birds.mp3"
+    >
+      Your browser does not support the HTML5 audio element.
+    </audio>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div onclick="play()">asdfasdf test</div>
+    <p>hello whatsup</p>
+    <hr />
+    <button onclick="play2()">howler play</button>
+    <button onclick="play3()">howler play3</button>
+    <script>
+      function play() {
+        const a1 = document.querySelector('#a1');
+        a1.play();
+      }
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"
+      integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var sound = new Howl({
+        html5: true,
+        src: [
+          'https://gateway.mangofox.com/ipfs/bafybeihabsuv6yii4ojhsc5qhs2f42rqyvyceeexq4ufxi5gsq6mywgvgm',
+        ],
+      });
+
+      function play2() {
+        // console.log('hi');
+        // return;
+        // const node = sound._sounds[0]._node;
+        // node.play();
+        // console.log(node);
+        sound.play();
+      }
+
+      function play3() {
+        console.log('hi');
+        return;
+        const node = sound._sounds[0]._node;
+        node.play();
+        console.log(node);
+      }
+    </script>
+  </body>
+</html>
